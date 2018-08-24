@@ -1,0 +1,121 @@
+a {
+  text-decoration: none;
+}
+
+h2, h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+p a, div a, button a {
+  color: darkgray;
+}
+
+.follow-button {
+  border-radius: 2.5%;
+  text-decoration: none;
+}
+
+.form {
+  margin: 0 auto;
+  margin-top: 30px;
+  max-width: 500px;
+  min-width: 150px;
+  width: 100%;
+}
+
+.footer {
+  bottom: 0;
+  font-size: 14px;
+  padding: 70px 0;
+  margin-top: 45px;
+  text-align: center;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.header {
+  background-image: url('../assets/Cover.png');
+  background-size: cover;
+  height: 280px;
+  padding: 30px 0;
+  width: 100%;
+}
+
+  .header-image {
+    background-image: url('../assets/Perfil.jpg');
+    background-size: cover;
+    border: 3px solid #fff;
+    display: block;
+    height: 120px;
+    margin: auto;
+    width: 120px;
+  }
+
+  .header-content {
+    display: block;
+    text-align: center;
+  }
+
+.icon {
+  font-size: 40px;
+  height: 40px;
+  width: 40px;
+}
+
+.link {
+  color: darkgray;
+}
+
+.logo {
+  display: block;
+  margin: 20px auto;
+  margin-bottom: 0;
+}
+
+.nav {
+
+}
+
+  .nav-option {
+    color: #fff;
+  }
+
+.resume {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+  .resume-type {
+    display: block;
+    margin: 7.5px 0;
+    transition: margin 0.5s ease-out;
+  }
+  
+    .resume-type:hover {
+      font-weight: bold;
+      margin-top: 2.5px;
+    }
+
+.section {
+  margin: 0 auto;
+  margin-top: 45px;
+  max-width: 67.5%;
+  padding-bottom: 50px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}

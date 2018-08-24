@@ -1,20 +1,170 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-
+<mat-card class="header">
+  <mat-card-header class="header-content">
+    <div mat-card-avatar class="header-image"></div>
+    <mat-card-title>
+      <h1>Adrián Arroyo</h1>
+    </mat-card-title>
+    <mat-card-subtitle>
+      <h2>Desarrollador Padawan de Software</h2>
+    </mat-card-subtitle>
+    <button mat-stroked-button class="follow-button">
+      <a href="https://twitter.com/AdrianArroyoC?ref_src=twsrc%5Etfw" target="_blank">Sigueme en <i class="devicon-twitter-plain colored"></i></a>
+    </button> 
+  </mat-card-header>
+</mat-card>
+<mat-toolbar color="primary" class="nav">
+    <span class="spacer"></span>
+  <span><a class="nav-option" href="#about">Sobre mi</a></span>
+  <span class="spacer"></span>
+  <span><a class="nav-option" href="#experience">Experiencia</a></span>
+  <span class="spacer"></span>
+  <span><a class="nav-option" href="#now">¿Qué hago ahora?</a></span>
+  <span class="spacer"></span>
+  <span><a class="nav-option" href="#contact">Contacto</a></span>
+  <span class="spacer"></span>
+</mat-toolbar>
+<mat-card class="section">
+  <mat-card-header>
+    <mat-card-title>
+      <h3 id="about">Sobre mi</h3>
+    </mat-card-title>
+  </mat-card-header>
+  <img mat-card-image src="../assets/PlatziTalks.jpg" alt="Foto con Freddy Vega CEO de Platzi">
+  <mat-card-content>
+    <mat-card-subtitle >
+      <h4>"Luke yo soy tu padre" - Darth Vader</h4>
+    </mat-card-subtitle>
+    <p>
+      Mi nombre es Adrián Arroyo, nací hace {{ calculateAge() }} años en la ciudad de Zamora, Michoacán (MX), me dedico al desarrollo de software, conozco un poco de distintas tecnologías y principalmente me dedico al BackEnd. Soy Ingeniero en Computación y estoy por obtener mi título como Maestro en Ing. de Software (falta la tesis), ambas las curse en la <a href="udg.mx" target="_blank">Universidad de Guadalajara</a>.
+    </p>
+    <mat-card-subtitle >
+        <h4>"Entrenar para dejar atras lo que temes perder debes" - Yoda</h4>
+    </mat-card-subtitle>
+    <p>
+      Me gusta mucho estudiar, por eso me decidí a hacer el posgrado, y a la par he tratado de complementar mis estudios con cursos online, principalmente en <a href="platzi.com" target="_blank">Platzi</a>. Creo que ensañar y compartir lo que sabes es la mejor manera de seguir aprendiendo, siempre he tenido la idea que en un futuro me gustaría colaborar para que las siguientes generaciones salgan mejor preparadas al mundo laboral, para esto me encantaría juntar mas experiencia laboral y después ser profesor, en especial me encantaría hacerlo en mi alma máter pero solo el futuro lo dirá.
+    </p>
+    <mat-card-subtitle >
+        <h4>"Tu enfoque determina tu realidad" - Qui-Gon Jinn</h4>
+    </mat-card-subtitle>
+    <p>
+      Como partes de mis pasiones puedo compartirles que soy cinéfilo, en especial me encanta la saga de Star Wars (como se puede notar), también me encantan los videojuegos, soy Nintendero y un gran fanático de la Leyenda de Zelda (17 juegos terminados). Otras de mis grandes pasiones son viajar y comer, me encanta conocer nuevos lugares con mi familia y mis amigos y en el proceso probar todo tipo de platillos nuevos, de en vez en cuando también me gusta intentar cocinarlos.
+    </p>
+  </mat-card-content>
+</mat-card>
+<mat-card class="section">
+  <mat-card-header>
+    <mat-card-title>
+      <h3 id="experience">Experiencia</h3>
+    </mat-card-title>
+  </mat-card-header>
+  <img mat-card-image src="../assets/IoTBootcamp.jpg" alt="Foto del equipo Lion, ganador del IoT Bootcamp del MIT">
+  <mat-card-content class="section-content">
+    <mat-card-subtitle>
+      <h4>"Poderoso soy por la fuerza, pero no tanto" - Yoda</h4>
+    </mat-card-subtitle>
+    <p>
+      Cuento con casi 3 años de experiencia laboral distribuidos entre 3 trabajos diferentes en los cuales me he desempeñado principalmente en la programación y también en administración de base de datos, en cada una de las oportunidades que he utilizado diferentes herramientas lo que me ha forzado a ser una persona más autodidacta y de rápido aprendizaje.
+    </p>
+    <mat-card-subtitle>
+      <h4>"No lo intentes. Hazlo, o no lo hagas, pero no lo intentes" - Yoda</h4>
+    </mat-card-subtitle>
+    <p>
+      Me enorgullece decir que en mis experiencias académicas fui buen alumno pero que además de obtener buenas notas también he logrado destacarme en distintos eventos como mi stancia académica en Colombia y sobre todo cumplir el sueño de asistir al <a href="http://www.mit.edu/" target="_blank"> Instituto Tecnológico de Massachusetts (MIT)</a> en los Estados Unidos en el que además fuí parte del equipo ganador en el <a href="https://bootcamp.mit.edu/iot/" target="_blank">Bootcampo de IoT</a> en el que participé.  
+    </p>
+    <mat-card-subtitle>
+      <h4>"¿Qué alimenta tu poder con la fuerza, sino tu pasión?" - Yuthura Ban</h4>
+    </mat-card-subtitle>
+    <p>
+      Si eres reclutador o solamente tienes curiosidad por saber un poco más de sobre la experiencia profesional que he acumulado, dejo mis curriculums vitae en formato PDF:
+    </p>
+    <div class="resume">
+      <div class="resume-type">
+        <a href="https://ucc3367e1cc2651e933180dd9745.dl.dropboxusercontent.com/cd/0/get/AOrnrLIB3a8xm9eEGfGJUMjX-bIyV04OqCW5F_8L0pYwVdFmLldBdSN27RhAcJbgEgoV3eKmBlc_diMuy6YfHU3xwUVoGz041lc8XwiKRl4YwZvQo4muEW4CwNW-YrXjRb7ek5blkIXpRY3KBzZQ5w-40QslGHimRQhsGJD-clFpaJWtaD1WHVxP-0YMr6lJXME_rbvT0z-vGnOIGd3ulE0b/file?dl=1" target="_blank">
+          <mat-icon class="icon">cloud_download</mat-icon><br>
+          <span>Español</span>
+        </a>
+      </div>
+      <div class="resume-type">
+        <a href="https://uc796c7fc1221416b1be606186c6.dl.dropboxusercontent.com/cd/0/get/AOrVoMaK8vy-HWVr8pmWNvSa7wBD8D3VvSQ5fW_Nea6cEmv43ul3mcEVD9jhmLx80TUURydOZz3aEa6wEinDLnOanBerqJY8wdDInE_N6yfLfIM_yfNNVHwZfs_VBTwqX39MQDdvEXUKNCzMUP0jh9m-UCCt0srOG4UnrwI8goIXdRuZ7pam2HqjVeQH_ujqyaKC9TuPEpQTlcrUkW8upE8t/file?dl=1" target="_blank">
+          <mat-icon class="icon">cloud_download</mat-icon><br>
+          <span>Inglés</span>
+        </a>
+      </div>
+    </div>
+    <p>
+      También dejo el enlace a mi perfil de la red social profesional, en donde se encuentra detallada toda la información mencionada en este sitio y en los archivos anteriores:
+    </p>
+    <a href="https://www.linkedin.com/in/adrianarroyoceja/" target="_blank"><img src="../assets/LinkedInLogo.png" alt="LinkedIn Logo" class="logo"></a>
+  </mat-card-content>
+</mat-card>
+<mat-card class="section">
+  <mat-card-header>
+    <mat-card-title>
+      <h3 id="now">¿Qué hago ahora?</h3>
+    </mat-card-title>
+  </mat-card-header>
+  <img mat-card-image src="../assets/MIS.jpg" alt="Foto de los compañeros de la MIS">
+  <mat-card-content class="section-content">
+    <span>Última actualización: <em>24 de agosto del 2018</em></span>
+    <mat-card-subtitle>
+      <h4>"Dificil de ver el futuro es" - Yoda</h4>
+    </mat-card-subtitle>
+    <p>
+      Este verano tras haber concluido mis clases en el posgrado decidí tomarme unas pequeñas vacaciones en mi ciudad natal y los alrededores para disfrutarlas junto con mi familia y amigos, esto mientras decidía que iba a hacer de mi futuro.
+    </p>
+    <mat-card-subtitle>
+      <h4>"Concéntrate en el momento, siente, no pienses, usa tu instinto" - Qui-Gon Jinn</h4>
+    </mat-card-subtitle>
+    <p>
+      Tras las vacaciones decidí continuar con mi carrera de desarrollador y me embarque en la busqueda de una nueva oportunidad laboral como desarrollador, una que sobre todo me provea la posibilidad de aprender más ya sea sobre JS o C#. Mi idea es migrar a una ciudad mas grande, principalmente me gustaría ir a Guadalajara pero estoy abierto a las posibilidades. Así que a partir de esta semana me encontraré aplicando a diferentes vacantes que considere convenientes.
+    </p>
+    <mat-card-subtitle>
+      <h4>"Algún día seré el Jedi mas poderoso de todos" - Anakin Skywalker</h4>
+    </mat-card-subtitle>
+    <p>
+      Mientras encuentro un nuevo trabajo me encuentro terminando mi proyecto de tesis (utilizando el stack MEAN) y a la par realizando cursos en línea, entra <a href="https://platzi.com/@adrianarroyoc/" target="_blank">aquí</a> para ver cuales. De igual forma si quieres ver algunos de los proyectos que he realizado, incluyendo este sitio web, te dejo <a href="https://github.com/adrianarroyoceja" target="_blank">mi repositorio personal</a>.
+    </p>
+  </mat-card-content>
+</mat-card>
+<mat-card class="section">
+  <mat-card-header>
+    <mat-card-title>
+      <h3 id="contact">Contacto</h3>
+    </mat-card-title>
+    <mat-card-subtitle>
+      <h4>"Que la fuerza te acompañe" - Los Jedis</h4>
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content class="section-content">
+    <p>
+      Estoy abierto al dialogo y me gustaría recibir feedback sobre este sitio web o también si quieres contactarme para algún trabajo o alguna oferta laboral, escríbeme por aquí o mandame un <a href="mailto:adrianarroyoceja@gmail.com"> correo electrónico</a>.
+    </p>
+    <form class="form">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Nombre completo" value="">
+      </mat-form-field>
+      <mat-form-field class="full-width">
+          <input matInput placeholder="Email" [formControl]="emailFormControl"
+                 [errorStateMatcher]="matcher">
+          <mat-hint></mat-hint>
+          <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+            Por favor ingrese un email válido
+          </mat-error>
+          <mat-error *ngIf="emailFormControl.hasError('required')">
+            Email <strong>obligatorio</strong>
+          </mat-error>
+        </mat-form-field>
+      <mat-form-field class="full-width">
+        <textarea matInput placeholder="Deja un comentario"></textarea>
+      </mat-form-field>
+      <button mat-raised-button>Enviar</button>
+    </form>      
+  </mat-card-content>
+</mat-card>
+<mat-toolbar color="primary" class="footer">
+  <span class="spacer"></span>
+  <span class="link"><b>Adrián Arroyo</b> © 2018<br>
+  Sitio alojado en <a href="https://github.com/adrianarroyoceja/adrianarroyoceja.github.io">GitHub Pages <i class="devicon-github-plain"></i></a>
+  <br>Creado con AngularJs <i class="devicon-angularjs-plain"></i></span>
+  <span class="spacer"></span>
+</mat-toolbar>
