@@ -1,3 +1,23 @@
+<mat-toolbar color="primary" class="nav nav-1">
+  <span class="spacer"></span>
+  <span><a class="nav-option" href="#about">Sobre mi</a></span>
+  <span class="spacer"></span>
+  <span><a class="nav-option" href="#experience">Experiencia</a></span>
+  <span class="spacer"></span>
+  <span><a class="nav-option" href="#now">¿Qué hago ahora?</a></span>
+  <span class="spacer"></span>
+  <span><a class="nav-option" href="#contact">Contacto</a></span>
+  <span class="spacer"></span>
+</mat-toolbar>
+<mat-toolbar color="primary" class="nav nav-2">
+  <button mat-button [matMenuTriggerFor]="menu" class="nav-2-button">Menu</button>
+  <mat-menu #menu="matMenu" class="nav-2-menu">
+  <button mat-menu-item class="nav-2-option"><a class="nav-option" href="#about">Sobre mi</a></button>
+  <button mat-menu-item class="nav-2-option"><a class="nav-option" href="#experience">Experiencia</a></button>
+  <button mat-menu-item class="nav-2-option"><a class="nav-option" href="#now">¿Qué hago ahora?</a></button>
+  <button mat-menu-item class="nav-2-option"><a class="nav-option" href="#contact">Contacto</a></button>
+  </mat-menu>
+</mat-toolbar>
 <mat-card class="header">
   <mat-card-header class="header-content">
     <div mat-card-avatar class="header-image"></div>
@@ -8,28 +28,17 @@
       <h2>Desarrollador Padawan de Software</h2>
     </mat-card-subtitle>
     <button mat-stroked-button class="follow-button">
-      <a href="https://twitter.com/AdrianArroyoC?ref_src=twsrc%5Etfw" target="_blank">Sigueme en <i class="devicon-twitter-plain colored"></i></a>
+      <a href="https://twitter.com/AdrianArroyoC?ref_src=twsrc%5Etfw" target="_blank">Sígueme en <i class="devicon-twitter-plain colored"></i></a>
     </button> 
   </mat-card-header>
 </mat-card>
-<mat-toolbar color="primary" class="nav">
-    <span class="spacer"></span>
-  <span><a class="nav-option" href="#about">Sobre mi</a></span>
-  <span class="spacer"></span>
-  <span><a class="nav-option" href="#experience">Experiencia</a></span>
-  <span class="spacer"></span>
-  <span><a class="nav-option" href="#now">¿Qué hago ahora?</a></span>
-  <span class="spacer"></span>
-  <span><a class="nav-option" href="#contact">Contacto</a></span>
-  <span class="spacer"></span>
-</mat-toolbar>
 <mat-card class="section">
   <mat-card-header>
     <mat-card-title>
       <h3 id="about">Sobre mi</h3>
     </mat-card-title>
   </mat-card-header>
-  <img mat-card-image src="../assets/PlatziTalks.jpg" alt="Foto con Freddy Vega CEO de Platzi">
+  <img mat-card-image src="assets/PlatziTalks.jpg" alt="Foto con Freddy Vega CEO de Platzi">
   <mat-card-content>
     <mat-card-subtitle >
       <h4>"Luke yo soy tu padre" - Darth Vader</h4>
@@ -38,7 +47,7 @@
       Mi nombre es Adrián Arroyo, nací hace {{ calculateAge() }} años en la ciudad de Zamora, Michoacán (MX), me dedico al desarrollo de software, conozco un poco de distintas tecnologías y principalmente me dedico al BackEnd. Soy Ingeniero en Computación y estoy por obtener mi título como Maestro en Ing. de Software (falta la tesis), ambas las curse en la <a href="udg.mx" target="_blank">Universidad de Guadalajara</a>.
     </p>
     <mat-card-subtitle >
-        <h4>"Entrenar para dejar atras lo que temes perder debes" - Yoda</h4>
+        <h4>"Entrenar para dejar atrás lo que temes perder debes" - Yoda</h4>
     </mat-card-subtitle>
     <p>
       Me gusta mucho estudiar, por eso me decidí a hacer el posgrado, y a la par he tratado de complementar mis estudios con cursos online, principalmente en <a href="platzi.com" target="_blank">Platzi</a>. Creo que ensañar y compartir lo que sabes es la mejor manera de seguir aprendiendo, siempre he tenido la idea que en un futuro me gustaría colaborar para que las siguientes generaciones salgan mejor preparadas al mundo laboral, para esto me encantaría juntar mas experiencia laboral y después ser profesor, en especial me encantaría hacerlo en mi alma máter pero solo el futuro lo dirá.
@@ -47,7 +56,7 @@
         <h4>"Tu enfoque determina tu realidad" - Qui-Gon Jinn</h4>
     </mat-card-subtitle>
     <p>
-      Como partes de mis pasiones puedo compartirles que soy cinéfilo, en especial me encanta la saga de Star Wars (como se puede notar), también me encantan los videojuegos, soy Nintendero y un gran fanático de la Leyenda de Zelda (17 juegos terminados). Otras de mis grandes pasiones son viajar y comer, me encanta conocer nuevos lugares con mi familia y mis amigos y en el proceso probar todo tipo de platillos nuevos, de en vez en cuando también me gusta intentar cocinarlos.
+      Como partes de mis pasiones puedo compartirles que disfruto mucho de ver películas, en especial me encanta la saga de Star Wars (como se puede notar), también me encantan los videojuegos, soy Nintendero y un gran fanático de la Leyenda de Zelda (17 juegos terminados). Otras de mis grandes pasiones son viajar y comer, me encanta conocer nuevos lugares con mi familia y mis amigos y en el proceso probar todo tipo de platillos nuevos, de en vez en cuando también me gusta intentar cocinarlos.
     </p>
   </mat-card-content>
 </mat-card>
@@ -57,7 +66,7 @@
       <h3 id="experience">Experiencia</h3>
     </mat-card-title>
   </mat-card-header>
-  <img mat-card-image src="../assets/IoTBootcamp.jpg" alt="Foto del equipo Lion, ganador del IoT Bootcamp del MIT">
+  <img mat-card-image src="assets/IoTBootcamp.jpg" alt="Foto del equipo Lion, ganador del IoT Bootcamp del MIT">
   <mat-card-content class="section-content">
     <mat-card-subtitle>
       <h4>"Poderoso soy por la fuerza, pero no tanto" - Yoda</h4>
@@ -69,7 +78,7 @@
       <h4>"No lo intentes. Hazlo, o no lo hagas, pero no lo intentes" - Yoda</h4>
     </mat-card-subtitle>
     <p>
-      Me enorgullece decir que en mis experiencias académicas fui buen alumno pero que además de obtener buenas notas también he logrado destacarme en distintos eventos como mi stancia académica en Colombia y sobre todo cumplir el sueño de asistir al <a href="http://www.mit.edu/" target="_blank"> Instituto Tecnológico de Massachusetts (MIT)</a> en los Estados Unidos en el que además fuí parte del equipo ganador en el <a href="https://bootcamp.mit.edu/iot/" target="_blank">Bootcampo de IoT</a> en el que participé.  
+      Me enorgullece decir que en mis experiencias académicas fui buen alumno pero que además de obtener buenas notas también he logrado destacarme en distintos eventos como mi estancia académica en Colombia y sobre todo cumplir el sueño de asistir al <a href="http://www.mit.edu/" target="_blank"> Instituto Tecnológico de Massachusetts (MIT)</a> en los Estados Unidos en el que además fuí parte del equipo ganador en el <a href="https://bootcamp.mit.edu/iot/" target="_blank">Bootcamp de IoT</a> en el que participé.  
     </p>
     <mat-card-subtitle>
       <h4>"¿Qué alimenta tu poder con la fuerza, sino tu pasión?" - Yuthura Ban</h4>
@@ -94,7 +103,7 @@
     <p>
       También dejo el enlace a mi perfil de la red social profesional, en donde se encuentra detallada toda la información mencionada en este sitio y en los archivos anteriores:
     </p>
-    <a href="https://www.linkedin.com/in/adrianarroyoceja/" target="_blank"><img src="../assets/LinkedInLogo.png" alt="LinkedIn Logo" class="logo"></a>
+    <a href="https://www.linkedin.com/in/adrianarroyoceja/" target="_blank"><img src="assets/LinkedInLogo.png" alt="LinkedIn Logo" class="logo"></a>
   </mat-card-content>
 </mat-card>
 <mat-card class="section">
@@ -103,11 +112,11 @@
       <h3 id="now">¿Qué hago ahora?</h3>
     </mat-card-title>
   </mat-card-header>
-  <img mat-card-image src="../assets/MIS.jpg" alt="Foto de los compañeros de la MIS">
+  <img mat-card-image src="assets/MIS.jpg" alt="Foto de los compañeros de la MIS">
   <mat-card-content class="section-content">
     <span>Última actualización: <em>24 de agosto del 2018</em></span>
     <mat-card-subtitle>
-      <h4>"Dificil de ver el futuro es" - Yoda</h4>
+      <h4>"Difícil de ver el futuro es" - Yoda</h4>
     </mat-card-subtitle>
     <p>
       Este verano tras haber concluido mis clases en el posgrado decidí tomarme unas pequeñas vacaciones en mi ciudad natal y los alrededores para disfrutarlas junto con mi familia y amigos, esto mientras decidía que iba a hacer de mi futuro.
@@ -116,7 +125,7 @@
       <h4>"Concéntrate en el momento, siente, no pienses, usa tu instinto" - Qui-Gon Jinn</h4>
     </mat-card-subtitle>
     <p>
-      Tras las vacaciones decidí continuar con mi carrera de desarrollador y me embarque en la busqueda de una nueva oportunidad laboral como desarrollador, una que sobre todo me provea la posibilidad de aprender más ya sea sobre JS o C#. Mi idea es migrar a una ciudad mas grande, principalmente me gustaría ir a Guadalajara pero estoy abierto a las posibilidades. Así que a partir de esta semana me encontraré aplicando a diferentes vacantes que considere convenientes.
+      Tras las vacaciones decidí continuar con mi carrera de desarrollador y me embarque en la búsqueda de una nueva oportunidad laboral como desarrollador, una que sobre todo me provea la posibilidad de aprender más ya sea sobre JS o C#. Mi idea es migrar a una ciudad mas grande, principalmente me gustaría ir a Guadalajara pero estoy abierto a las posibilidades. Así que a partir de esta semana me encontraré aplicando a diferentes vacantes que considere convenientes.
     </p>
     <mat-card-subtitle>
       <h4>"Algún día seré el Jedi mas poderoso de todos" - Anakin Skywalker</h4>
@@ -132,7 +141,7 @@
       <h3 id="contact">Contacto</h3>
     </mat-card-title>
     <mat-card-subtitle>
-      <h4>"Que la fuerza te acompañe" - Los Jedis</h4>
+      <h4>"Que la fuerza te acompañe"</h4>
     </mat-card-subtitle>
   </mat-card-header>
   <mat-card-content class="section-content">
@@ -163,8 +172,8 @@
 </mat-card>
 <mat-toolbar color="primary" class="footer">
   <span class="spacer"></span>
-  <span class="link"><b>Adrián Arroyo</b> © 2018<br>
-  Sitio alojado en <a href="https://github.com/adrianarroyoceja/adrianarroyoceja.github.io">GitHub Pages <i class="devicon-github-plain"></i></a>
-  <br>Creado con AngularJs <i class="devicon-angularjs-plain"></i></span>
+  <span><b>Adrián Arroyo</b> © 2018<br>
+  Sitio alojado en <a href="https://github.com/adrianarroyoceja/adrianarroyoceja.github.io" class="link">GitHub Pages <i class="devicon-github-plain"></i></a>
+  <br>Creado con Angular <i class="devicon-angularjs-plain"></i></span>
   <span class="spacer"></span>
 </mat-toolbar>

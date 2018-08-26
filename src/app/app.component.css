@@ -48,9 +48,12 @@ p a, div a, button a {
 .header {
   background-image: url('../assets/Cover.png');
   background-size: cover;
+  border-bottom: darkgray solid 1px;
   height: 280px;
+  margin-top: 64px;
   padding: 30px 0;
   width: 100%;
+  z-index: 1;
 }
 
   .header-image {
@@ -85,13 +88,36 @@ p a, div a, button a {
 }
 
 .nav {
-
+  top: 0;
+  position: fixed;
+  z-index: 3;
 }
 
   .nav-option {
     color: #fff;
   }
 
+.nav-2 {
+  display: none;
+}
+
+  .nav-2-button {
+    font-size: 21px;
+  }
+
+  /deep/ .mat-menu-content {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+    .nav-2-option {
+      background: #c2185b;
+    }
+
+      .nav-2-option a {
+        color: #fff;
+      }
+  
 .resume {
   display: flex;
   justify-content: space-around;
@@ -112,10 +138,30 @@ p a, div a, button a {
 .section {
   margin: 0 auto;
   margin-top: 45px;
-  max-width: 67.5%;
+  max-width: 65%;
   padding-bottom: 50px;
+  z-index: 2;
 }
 
 .spacer {
   flex: 1 1 auto;
+}
+
+@media only screen and (max-width: 600px) {
+  h3 {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+
+  .nav-1 {
+    display: none;
+  }
+
+  .nav-2 {
+    display: flex;
+  }
+
+  .section {
+    max-width: 80%;
+  }
 }
