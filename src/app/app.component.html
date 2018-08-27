@@ -148,27 +148,24 @@
   </mat-card-header>
   <mat-card-content class="section-content">
     <p>
-      Estoy abierto al dialogo y me gustaría recibir feedback sobre este sitio web o también si quieres contactarme para algún trabajo o alguna oferta laboral, escríbeme por aquí o mandame un <a href="mailto:adrianarroyoceja@gmail.com"> correo electrónico</a>.
+      Estoy abierto al dialogo y me gustaría recibir feedback sobre este sitio web o también si quieres contactarme para algún trabajo o alguna oferta laboral, mandame un <a href="mailto:adrianarroyoceja@gmail.com"> correo electrónico</a> o escríbeme por aquí:
     </p>
-    <form class="form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <form class="form" [formGroup]="contactForm" method="POST" (ngSubmit)="onSubmit()" action="https://formspree.io/adrianarroyoceja@gmail.com" novalidate>
       <mat-form-field class="full-width">
-        <input matInput placeholder="Nombre completo" formControlName="name" id="name">
+        <input matInput placeholder="Nombre completo" formControlName="name" id="name" type="text" name="name" required>
       </mat-form-field>
       <mat-form-field class="full-width">
-          <input matInput placeholder="Email" [formControl]="emailFormControl" [errorStateMatcher]="matcher" formControlName="email" id="email">
+          <input matInput placeholder="Email" [formControl]="email" [errorStateMatcher]="matcher" type="email" formControlName="email" id="email" name="email" required>
           <mat-hint></mat-hint>
-          <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+          <mat-error *ngIf="email.hasError('email') && !email.hasError('required')">
             Por favor ingrese un email válido
-          </mat-error>
-          <mat-error *ngIf="emailFormControl.hasError('required')">
-            Email <strong>obligatorio</strong>
           </mat-error>
         </mat-form-field>
       <mat-form-field class="full-width">
-        <textarea matInput placeholder="Deja un comentario" formControlName="comments" id="comments" ></textarea>
+        <textarea matInput placeholder="Deja un comentario" formControlName="message" id="message" name="message" type="text" required></textarea>
       </mat-form-field>
-      <button mat-raised-button type="submit">Enviar</button>
-    </form>      
+      <input type="submit" value="Enviar" class="mat-raised-button">
+    </form>
   </mat-card-content>
 </mat-card>
 <mat-toolbar color="primary" class="footer">

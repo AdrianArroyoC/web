@@ -2,6 +2,7 @@ import { Component, AfterViewInit, ElementRef, OnInit } from '@angular/core';
 import { FormControl, FormGroupDirective, NgForm, Validators, FormGroup } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
 
+
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
@@ -19,11 +20,9 @@ export class AppComponent implements AfterViewInit, OnInit {
   title = 'Web personal';
 
   contactForm: FormGroup;
-
-  emailFormControl = new FormControl('', [
-    Validators.required,
-    Validators.email,
-  ]);
+  name = new FormControl('', Validators.required);
+  email = new FormControl('', [ Validators.email, Validators.required ]);
+  message = new FormControl('', Validators.required);
 
   matcher = new MyErrorStateMatcher();
 
@@ -33,17 +32,17 @@ export class AppComponent implements AfterViewInit, OnInit {
 
   ngOnInit() {
     this.contactForm = new FormGroup({
-      name: new FormControl(null, Validators.required),
-      email: new FormControl(null, Validators.required),
-      comments: new FormControl(null, Validators.required)
+      name: this.name,
+      email: this.email,
+      message: this.message
     });
   }
 
   onSubmit() {
     if (this.contactForm.valid) {
-      const { name, email, comments } = this.contactForm.value;
-      console.log( 'mailchimp' );
+      window.alert('Mensaje enviado');
       this.contactForm.reset();
+      this.contactForm.markAsUntouched();
     }
   }
 
