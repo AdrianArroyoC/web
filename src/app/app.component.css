@@ -16,8 +16,12 @@ p {
   text-align: justify;
 }
 
-p a, div a, button a {
+p a, div a {
   color: darkgray;
+}
+
+button a {
+  color: #00aced;
 }
 
 .follow-button {
@@ -56,6 +60,15 @@ p a, div a, button a {
   z-index: 1;
 }
 
+  .header button {
+    background: #fff;
+  }
+
+  .header-content {
+    display: block;
+    text-align: center;
+  }
+
   .header-image {
     background-image: url('../assets/Perfil.jpg');
     background-size: cover;
@@ -64,11 +77,6 @@ p a, div a, button a {
     height: 120px;
     margin: auto;
     width: 120px;
-  }
-
-  .header-content {
-    display: block;
-    text-align: center;
   }
 
 .icon {
@@ -138,7 +146,7 @@ p a, div a, button a {
 .section {
   margin: 0 auto;
   margin-top: 45px;
-  max-width: 65%;
+  max-width: 55%;
   padding-bottom: 50px;
   z-index: 2;
 }
@@ -165,3 +173,9 @@ p a, div a, button a {
     max-width: 80%;
   }
 }
+
+@media only screen and (max-width: 400px) {
+  .header {
+    padding-bottom: 50px;
+  }
+} 

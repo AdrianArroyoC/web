@@ -1,5 +1,6 @@
 <mat-toolbar color="primary" class="nav nav-1">
   <span class="spacer"></span>
+  <span class="spacer"></span>
   <span><a class="nav-option" href="#about">Sobre mi</a></span>
   <span class="spacer"></span>
   <span><a class="nav-option" href="#experience">Experiencia</a></span>
@@ -7,6 +8,7 @@
   <span><a class="nav-option" href="#now">¿Qué hago ahora?</a></span>
   <span class="spacer"></span>
   <span><a class="nav-option" href="#contact">Contacto</a></span>
+  <span class="spacer"></span>
   <span class="spacer"></span>
 </mat-toolbar>
 <mat-toolbar color="primary" class="nav nav-2">
@@ -148,13 +150,12 @@
     <p>
       Estoy abierto al dialogo y me gustaría recibir feedback sobre este sitio web o también si quieres contactarme para algún trabajo o alguna oferta laboral, escríbeme por aquí o mandame un <a href="mailto:adrianarroyoceja@gmail.com"> correo electrónico</a>.
     </p>
-    <form class="form">
+    <form class="form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
       <mat-form-field class="full-width">
-        <input matInput placeholder="Nombre completo" value="">
+        <input matInput placeholder="Nombre completo" formControlName="name" id="name">
       </mat-form-field>
       <mat-form-field class="full-width">
-          <input matInput placeholder="Email" [formControl]="emailFormControl"
-                 [errorStateMatcher]="matcher">
+          <input matInput placeholder="Email" [formControl]="emailFormControl" [errorStateMatcher]="matcher" formControlName="email" id="email">
           <mat-hint></mat-hint>
           <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
             Por favor ingrese un email válido
@@ -164,9 +165,9 @@
           </mat-error>
         </mat-form-field>
       <mat-form-field class="full-width">
-        <textarea matInput placeholder="Deja un comentario"></textarea>
+        <textarea matInput placeholder="Deja un comentario" formControlName="comments" id="comments" ></textarea>
       </mat-form-field>
-      <button mat-raised-button>Enviar</button>
+      <button mat-raised-button type="submit">Enviar</button>
     </form>      
   </mat-card-content>
 </mat-card>
