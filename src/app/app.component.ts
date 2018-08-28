@@ -2,8 +2,9 @@ import { Component, AfterViewInit, ElementRef, OnInit } from '@angular/core';
 import { FormControl, FormGroupDirective, NgForm, Validators, FormGroup } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
 
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 
-/** Error when invalid control is dirty, touched, or submitted. */
+// Error when invalid control is dirty, touched, or submitted.
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
     const isSubmitted = form && form.submitted;
@@ -40,13 +41,18 @@ export class AppComponent implements AfterViewInit, OnInit {
 
   onSubmit() {
     if (this.contactForm.valid) {
+      const headers = new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded');
+      this.http.post(
+        'https://formspree.io/adrianarroyoceja@gmail.com',
+        this.contactForm,
+        { headers: headers }
+      );
       window.alert('Mensaje enviado');
       this.contactForm.reset();
-      this.contactForm.markAsUntouched();
     }
   }
 
-  constructor(private elementRef: ElementRef) {}
+  constructor(private elementRef: ElementRef, public http: HttpClient) {}
   ngAfterViewInit() {
     this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = 'black';
   }
