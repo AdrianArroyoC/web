@@ -58,7 +58,7 @@
         <h4>"Tu enfoque determina tu realidad" - Qui-Gon Jinn</h4>
     </mat-card-subtitle>
     <p>
-      Como partes de mis pasiones puedo compartirles que disfruto mucho de ver películas, en especial me encanta la saga de Star Wars (como se puede notar), también me encantan los videojuegos, soy Nintendero y un gran fanático de la Leyenda de Zelda (17 juegos terminados). Otras de mis grandes pasiones son viajar y comer, me encanta conocer nuevos lugares con mi familia y mis amigos y en el proceso probar todo tipo de platillos nuevos, de en vez en cuando también me gusta intentar cocinarlos.
+      Como partes de mis pasiones puedo compartirles que disfruto mucho de ver películas, en especial me encanta la saga de Star Wars (como se puede notar), también me encantan los videojuegos, soy Nintendero de corazón y un gran amante de la Leyenda de Zelda (17 juegos terminados y contando). Otras de mis grandes pasiones son viajar y comer, me encanta conocer nuevos lugares con mi familia y mis amigos, a la par me gusta mucho manejar nuevos caminos, cuando viaja o conozco nuevos restaurantes me encanta probar todo tipo de platillos nuevos (en especial comida de otros países), de en vez en cuando también me gusta intentar cocinarlos.
     </p>
   </mat-card-content>
 </mat-card>
@@ -150,19 +150,19 @@
     <p>
       Estoy abierto al dialogo y me gustaría recibir feedback sobre este sitio web o también si quieres contactarme para algún trabajo o alguna oferta laboral, mandame un <a href="mailto:adrianarroyoceja@gmail.com"> correo electrónico</a> o escríbeme por aquí:
     </p>
-    <form class="form" [formGroup]="contactForm" method="POST" (ngSubmit)="onSubmit()" action="https://formspree.io/adrianarroyoceja@gmail.com" novalidate>
+    <form class="form" [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
       <mat-form-field class="full-width">
-        <input matInput placeholder="Nombre completo" formControlName="name" id="name" type="text" name="name" required>
+        <input matInput placeholder="Nombre completo" formControlName="name" id="name" type="text" required>
       </mat-form-field>
       <mat-form-field class="full-width">
-          <input matInput placeholder="Email" [formControl]="email" [errorStateMatcher]="matcher" type="email" formControlName="email" id="email" name="email" required>
+          <input matInput placeholder="Email" [formControl]="email" [errorStateMatcher]="matcher" type="email" formControlName="email" id="email" required>
           <mat-hint></mat-hint>
           <mat-error *ngIf="email.hasError('email') && !email.hasError('required')">
             Por favor ingrese un email válido
           </mat-error>
         </mat-form-field>
       <mat-form-field class="full-width">
-        <textarea matInput placeholder="Deja un comentario" formControlName="message" id="message" name="message" type="text" required></textarea>
+        <textarea matInput placeholder="Deja un comentario" formControlName="message" id="message" type="text" required></textarea>
       </mat-form-field>
       <input type="submit" value="Enviar" class="mat-raised-button">
     </form>
